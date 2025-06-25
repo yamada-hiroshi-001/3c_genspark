@@ -2,7 +2,19 @@ import streamlit as st
 import re
 
 # タイトル
-st.title("汎用3C分析プロンプト生成ツール")
+st.title("GenSpark用3C分析プロンプト生成ツール")
+st.markdown("""
+ツールには下記のデータが必要です：
+
+- **DSインサイト時系列キーワード**（調べたいサービス名）
+- **Dockpit サイトサマリ**（Dockpitで調査した競合のサイトサマリ）
+- **Dockpit 集客構造**（Dockpitで調査した集客構造）
+- **KnownsBIZ ファネル構造**（KnownsBIZで調査した自社と競合のファネル）
+- **KnownsBIZ 商品・サービスへの意見**（KnownsBIZで調査した自社と競合のユーザーの意見）
+
+⚠️ 上記以外の形式や文字コードで読み込むとエラーが出ることがあります。  
+事前に内容・形式を確認の上でご利用ください。
+""")
 
 # ユーザー入力
 service_name = st.text_input("サービス名を入力してください", "サービスA")
