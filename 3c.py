@@ -1,4 +1,4 @@
-﻿import streamlit as st
+import streamlit as st
 import re
 
 # タイトル
@@ -18,9 +18,13 @@ opinions_self = st.file_uploader("KnownsBIZ：自社商品への意見（任意�
 opinions_competitor = st.file_uploader("KnownsBIZ：競合商品への意見（任意・CSV）", type=["csv"])
 
 # テンプレート読み込み
-template_path = "template_3c.txt"
+import os
+
+base_path = os.path.dirname(__file__)
+template_path = os.path.join(base_path, "Template_3c.txt")
+
 with open(template_path, "r", encoding="utf-8") as f:
-    template_text = f.read()
+    template = f.read()
 
 # テキスト置換
 replacements = {
