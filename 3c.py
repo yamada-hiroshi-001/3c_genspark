@@ -25,13 +25,13 @@ service_name = st.text_input("サービス名を入力してください", "サ�
 market_name = st.text_input("市場名を入力してください", "サービスAの市場")
 
 # ファイルアップロード
-ds_file = st.file_uploader("DSインサイト：時系列キーワード（CSV）", type=["csv"])
-statistics_file = st.file_uploader("Dockpit：サイトサマリ（statistics.txt）", type=["txt"])
-referral_file = st.file_uploader("Dockpit：集客構造（referralType.txt）", type=["txt"])
-funnel_self = st.file_uploader("KnownsBIZ：自社ファネル構造（任意・PNG）", type=["png"])
-funnel_competitor = st.file_uploader("KnownsBIZ：競合ファネル構造（任意・PNG）", type=["png"])
-opinions_self = st.file_uploader("KnownsBIZ：自社商品への意見（任意・CSV）", type=["csv"])
-opinions_competitor = st.file_uploader("KnownsBIZ：競合商品への意見（任意・CSV）", type=["csv"])
+ds_file = st.file_uploader("DSインサイト：時系列キーワード（CSV）DSインサイトで対象のサービス名での時系列KWのCSVファイル", type=["csv"])
+statistics_file = st.file_uploader("Dockpit：サイトサマリ（statistics.txt）DockPitのサイトサマリ（競合含むユーザー数・セッション数などの基本情報）のTXTファイル", type=["txt"])
+referral_file = st.file_uploader("Dockpit：集客構造（referralType.txt）DockPitの集客構造サマリ（競合含む自然検索経由・検索広告経由の流入などの集客構造）のTXTファイル", type=["txt"])
+funnel_self = st.file_uploader("KnownsBIZ：自社ファネル構造（任意・PNG）KnownsBizからファネル構造の画像ファイルをDLしてアップ", type=["png"])
+funnel_competitor = st.file_uploader("KnownsBIZ：競合ファネル構造（任意・PNG）KnownsBizからファネル構造の画像ファイルをDLしてアップ", type=["png"])
+opinions_self = st.file_uploader("KnownsBIZ：自社商品への意見（任意・CSV）KnownsBizから対象ブランドの顧客の意見のCSVをDLしてアップ", type=["csv"])
+opinions_competitor = st.file_uploader("KnownsBIZ：競合商品への意見（任意・CSV）KnownsBizからベンチマークブランドの顧客の意見のCSVをDLしてアップ", type=["csv"])
 
 # テンプレート読み込み
 with open("Template_3c.txt", "r", encoding="utf-8") as f:
