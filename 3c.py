@@ -42,7 +42,7 @@ with open("Template_3c.txt", "r", encoding="utf-8") as f:
 replacements = {
     "[[サービス名]]": service_name,
     "[[市場名]]": market_name,
-    "[[URL]]": service_URL,
+    "[[URL]]": service_url,
     "[[DSファイル]]": ds_file.name if ds_file else "未アップロード",
     "[[サイトサマリ]]": statistics_file.name if statistics_file else "未アップロード",
     "[[集客構造]]": referral_file.name if referral_file else "未アップロード",
