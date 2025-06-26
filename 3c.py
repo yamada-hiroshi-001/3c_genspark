@@ -22,7 +22,7 @@ GenSparkのＡＩスライドはＰＰＴでＤＬできますので、細かい
 
 # ユーザー入力
 service_name = st.text_input("サービス名を入力してください", "サービスA")
-service_name = st.text_input("サービス名のURLを入力してください", "URL")
+service_url = st.text_input("サービス名のURLを入力してください", "URL")
 market_name = st.text_input("市場名を入力してください", "サービスAの市場")
 
 # ファイルアップロード
