@@ -22,6 +22,7 @@ GenSparkのＡＩスライドはＰＰＴでＤＬできますので、細かい
 
 # ユーザー入力
 service_name = st.text_input("サービス名を入力してください", "サービスA")
+service_name = st.text_input("サービス名のURLを入力してください", "URL")
 market_name = st.text_input("市場名を入力してください", "サービスAの市場")
 
 # ファイルアップロード
@@ -41,6 +42,7 @@ with open("Template_3c.txt", "r", encoding="utf-8") as f:
 replacements = {
     "[[サービス名]]": service_name,
     "[[市場名]]": market_name,
+    "[[URL]]": service_URL,
     "[[DSファイル]]": ds_file.name if ds_file else "未アップロード",
     "[[サイトサマリ]]": statistics_file.name if statistics_file else "未アップロード",
     "[[集客構造]]": referral_file.name if referral_file else "未アップロード",
