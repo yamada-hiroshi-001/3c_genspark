@@ -2,7 +2,7 @@ import streamlit as st
 import re
 
 # タイトル
-st.title("GenSpark用3C分析プロンプト生成ツール")
+st.title("GenSpark用3C分析プロンプト生成ツール Ver0.1β")
 st.markdown("""
 ツールには下記のデータが必要です：
 
